@@ -28,7 +28,7 @@ export function Header() {
               Referenzen
             </Link>
             <Link href="/performance" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              Performance
+              Kickstarter
             </Link>
             <Link
               href="/about"
