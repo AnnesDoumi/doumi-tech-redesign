@@ -27,9 +27,6 @@ export function Header() {
             <Link href="/portfolio" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
               Referenzen
             </Link>
-            <Link href="/performance" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              Kickstarter
-            </Link>
             <Link
               href="/about"
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"

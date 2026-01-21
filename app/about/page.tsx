@@ -46,8 +46,16 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden bg-gradient-to-br from-secondary/20 via-primary/15 to-accent/10 border border-border/50">
-              <Image src="/annes.jpg" alt="Über mich – Webentwickler" fill className="object-cover" />
+            <div className="grid grid-cols-2 gap-6">
+              {/* Erstes Bild */}
+              <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden bg-black border border-border/50">
+                <Image src="/annes.jpg" alt="Über mich – Webentwickler" fill className="object-cover" />
+              </div>
+
+              {/* Zweites Bild */}
+              <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden bg-black border border-border/50">
+                <Image src="/annes030.jpg" alt="Über mich – Portrait 2" fill className="object-cover" />
+              </div>
             </div>
           </div>
 
