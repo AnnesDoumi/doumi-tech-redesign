@@ -1,0 +1,13 @@
+   <div className="h-64 rounded-2xl overflow-hidden relative border border-border/50 bg-black">
+                                    <video
+                                        src="/modern.mp4"
+                                        autoPlay
+                                        muted
+                                        loop
+                                        playsInline
+                                        className="w-full h-full object-cover"
+                                        style={{ objectPosition: 'center' }}
+                                        preload="auto"
+                                    />
+                                </div>
+

@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 
 export function Hero() {
+    //@ts-ignore
     return (
         <section className="cv-auto pt-24 pb-3 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
             <div className="absolute inset-0 -z-10">
@@ -88,16 +89,9 @@ export function Hero() {
                             </div>
                             <div className="space-y-4 pt-12">
                                 <div className="h-64 rounded-2xl overflow-hidden relative border border-border/50 bg-black">
-                                    <video
-                                        src="/modern.mp4"
-                                        autoPlay
-                                        muted
-                                        loop
-                                        playsInline
-                                        className="w-full h-full object-cover"
-                                        style={{ objectPosition: 'center' }}
-                                        preload="auto"
-                                    />
+                                    <div className="h-64 rounded-2xl overflow-hidden relative bg-primary/10 border border-border/50">
+                                        <Image src="/annes030.jpg" alt="Webentwicklung" fill className="object-cover"/>
+                                    </div>
                                 </div>
                                 <div
                                     className="h-48 rounded-2xl overflow-hidden bg-gradient-to-br from-secondary/20 to-primary/15 border border-border/50 p-6 flex flex-col justify-between">
@@ -123,18 +117,10 @@ export function Hero() {
                                 <Image src="/happycustomer.jpg" alt="Webentwicklung" fill className="object-cover"/>
                             </div>
 
-                            {/* Box 3: Video */}
-                            <div className="h-40 rounded-2xl overflow-hidden relative border border-border/50 bg-black">
-                                <video
-                                    src="/modern.mp4"
-                                    autoPlay
-                                    muted
-                                    loop
-                                    playsInline
-                                    className="w-full h-full object-cover"
-                                    style={{ objectPosition: 'center' }}
-                                />
+                            <div className="h-40 rounded-2xl overflow-hidden relative bg-primary/10 border border-border/50">
+                                <Image src="/annes030.jpg" alt="Webentwicklung" fill className="object-cover"/>
                             </div>
+
 
                             {/* Box 4: Modern & Zuverlässig */}
                             <div className="h-40 rounded-2xl overflow-hidden bg-gradient-to-br from-secondary/20 to-primary/15 border border-border/50 p-4 flex flex-col justify-between">
