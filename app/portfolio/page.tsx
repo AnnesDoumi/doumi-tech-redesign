@@ -31,7 +31,7 @@ const projects: Project[] = [
         tech: ["Next.js", "React", "Tailwind"],
     },
     {
-        title: "In Bearbeitung -Mirjam Barner",
+        title: "Mirjam Barner",
         description: "About, Newsletter, Quiz, Design, Termine",
         image: "/mirjambarner.png",
         href: "https://www.mirjambarner.com",
@@ -39,7 +39,7 @@ const projects: Project[] = [
 
     },
     {
-        title: "Curry Baude Berlin",
+        title: "In Progress - Curry Baude Berlin",
         description: "Website für legendäre Currywurst-Baude seit 1989 im U-Bahnhof Gesundbrunnen.",
         image: "/curry-baude-gemalde.jpeg",
         href: "https://currybaude.vercel.app",
