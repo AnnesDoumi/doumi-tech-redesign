@@ -198,7 +198,7 @@ export default function PortfolioPage() {
                                         </div>
                                         <div>
                                             <div className="text-2xl font-bold text-accent-foreground">kurze</div>
-                                            <div className="text-sm text-accent-foreground/80">Entwicklungszeit</div>
+                                            <div className="text-sm text-accent-foreground/80">Entwicklung</div>
                                         </div>
                                     </div>
                                 </div>
