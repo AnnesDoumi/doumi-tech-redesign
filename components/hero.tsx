@@ -129,7 +129,18 @@ export function Hero() {
                             </div>
 
                             <div className="h-40 rounded-2xl overflow-hidden relative bg-primary/10 border border-border/50">
-                                <Image src="/annes030.jpg" alt="Webentwicklung" fill className="object-cover"/>
+                                <div className="h-64 rounded-2xl overflow-hidden relative border border-border/50 bg-black">
+                                    <video
+                                        src="/modern.mp4"
+                                        autoPlay
+                                        muted
+                                        loop
+                                        playsInline
+                                        className="w-full h-full object-cover"
+                                        style={{ objectPosition: 'center' }}
+                                        preload="auto"
+                                    />
+                                </div>
                             </div>
 
 
