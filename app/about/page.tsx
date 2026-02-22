@@ -30,11 +30,11 @@ export default function AboutPage() {
   ]
 
   return (
-      <div className="pt-12 min-h-screen bg-gradient-to-b from-background to-background">
+      <div className="pt-24 min-h-screen bg-gradient-to-b from-background to-background">
         <Header />
         <main className="container mx-auto px-4 py-16 md:py-24">
           {/* Hero Section with Image */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-24 pb-24">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">Über mich</h1>
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
@@ -60,7 +60,7 @@ export default function AboutPage() {
           </div>
 
           {/* Meine Vorteile */}
-          <div className="mb-12">
+          <div className="mb-12 pb-24">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Was du von mir erwarten kannst</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {values.map((value, index) => {

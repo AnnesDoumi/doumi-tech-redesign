@@ -5,7 +5,7 @@ import { ReviewsCarousel } from "@/components/reviews-carousel"
 
 export function CTA() {
   return (
-      <section className="cv-auto pb-12 pt-12 px-4 sm:px-6 lg:px-8 ">
+      <section className="cv-auto pb-24 pt-24 px-4 sm:px-6 lg:px-8 ">
         <div className="container mx-auto max-w-7xl">
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-accent via-secondary to-primary border border-border/50">
             <div className="grid items-center gap-8 lg:grid-cols-2">

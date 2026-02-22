@@ -146,7 +146,7 @@ export default function PortfolioPage() {
                         )
                     })}
                 </section>
-                <section className="cv-auto pt-12 pb-0 px-4 sm:px-6 lg:px-8">
+                <section className="cv-auto pt-24 pb-0 px-4 sm:px-6 lg:px-8">
                     <div className="container mx-auto max-w-7xl">
                         <div
                             className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-accent via-accent to-secondary">
