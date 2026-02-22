@@ -38,14 +38,6 @@ const projects: Project[] = [
         status: "live",
 
     },
-    {
-        title: "In Progress - Curry Baude Berlin",
-        description: "Website für legendäre Currywurst-Baude seit 1989 im U-Bahnhof Gesundbrunnen.",
-        image: "/curry-baude-gemalde.jpeg",
-        href: "https://currybaude.vercel.app",
-        status: "live",
-        tech: ["Next.js", "React", "Tailwind", "TypeScript"],
-    },
 ]
 
 export default function PortfolioPage() {
