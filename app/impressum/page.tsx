@@ -37,12 +37,12 @@ export default function ImpressumPage() {
                         </div>
 
                         <div className="space-y-2">
-                            <h3 className="text-lg font-medium">Umsatzsteuer</h3>
-                            <p>Es liegt derzeit keine Umsatzsteuer-Identifikationsnummer vor.</p>
-                            <p className="text-muted-foreground">
-                                Hinweis: Die Steuernummer wird aus Datenschutzgründen nicht veröffentlicht. Die Tätigkeit wurde
-                                kürzlich aufgenommen.
-                            </p>
+                            <h3 className="text-lg font-medium">Umsatzsteuer-ID</h3>
+                            <p>DE459845250</p>
+                        </div>
+                        <div className="space-y-2">
+                            <h3 className="text-lg font-medium">Steuernummer</h3>
+                            <p>23/216/00653</p>
                         </div>
 
                         <div className="space-y-2">
