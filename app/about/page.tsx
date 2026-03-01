@@ -95,7 +95,7 @@ export default function AboutPage() {
 
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Technik, die performt</h2>
-              <p className="text-muted-foreground mb-12 text-lg">
+              <p className="text-foreground mb-12 text-lg">
                 Ich nutze keine billigen Baukästen. Deine Webseite wird mit den gleichen Technologien gebaut, die auch Branchenriesen wie Netflix oder Airbnb nutzen. Das Ergebnis: <strong>Maximale Geschwindigkeit und Sicherheit.</strong>
               </p>
               <div className="flex flex-wrap justify-center gap-3">
