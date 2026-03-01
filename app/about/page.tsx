@@ -39,7 +39,7 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-32">
             <div className="order-2 lg:order-1">
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8 tracking-tight">
-                Moin, ich bin <span className="text-accent">Annes.</span>
+                <span className="text-accent">Über mich</span>
               </h1>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
@@ -67,10 +67,10 @@ export default function AboutPage() {
           {/* Warum ich? */}
           <div className="mb-32">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold mb-4">Keine Spielereien. Nur Qualität.</h2>
+              <h2 className="text-3xl md:text-5xl font-bold mb-4">Keine Spielereien.</h2> <h2 className="text-accent text-3xl md:text-5xl font-bold mb-4">Nur Qualität.</h2>
               <p className="text-muted-foreground text-lg">Was du von einer Zusammenarbeit mit mir erwarten kannst.</p>
             </div>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-4">
               {values.map((value, index) => {
                 const Icon = value.icon
                 return (
@@ -90,7 +90,7 @@ export default function AboutPage() {
           </div>
 
           {/* Tech Stack - Professionell verpackt */}
-          <div className="relative bg-card border border-border/50 rounded-[2.5rem] p-8 md:p-16 overflow-hidden">
+          <div className="relative  bg-gradient-to-br from-accent via-accent to-secondary bg-card border border-border/50 rounded-[2.5rem] p-8 md:p-16 overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 blur-[100px] -z-10" />
 
             <div className="max-w-3xl mx-auto text-center">
