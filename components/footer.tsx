@@ -42,8 +42,6 @@ export function Footer() {
                             </Link>
                             <Link href="/portfolio"
                                   className="text-sm text-muted-foreground hover:text-accent transition-colors">Referenzen</Link>
-                            <Link href="/performance"
-                                  className="text-sm text-muted-foreground hover:text-accent transition-colors">Kickstarter</Link>
                             <Link href="/about"
                                   className="text-sm text-muted-foreground hover:text-accent transition-colors">
                                 Über mich

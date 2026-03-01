@@ -69,7 +69,7 @@ export function ReviewsCarousel({
         >
             <article
                 className={clsx(
-                    "mx-auto h-full w-full max-w-[600px] max-h-[520px]",
+                    "mx-auto h-full w-full max-w-[600px] max-h-[520px] animate-review",
                     "rounded-3xl border border-white/10 bg-card/80 backdrop-blur-xl",
                     "shadow-2xl shadow-black/10 ring-1 ring-white/10",
                     "p-10 flex flex-col justify-between text-center items-center"

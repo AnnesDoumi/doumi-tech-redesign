@@ -15,7 +15,7 @@ export default function ReviewsPage() {
             <Header />
             <main className="pt-28 md:pt-32 container mx-auto px-4 pb-16 md:pb-24">
                 <header className="text-center mb-10">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4">Kundenstimmen</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4">Echte Projekte. Ehrliches Feedback.</h1>
                     <p className="text-lg text-muted-foreground">
                         Ausgewählte Google-Bewertungen zu Projekten in Webdesign & Webentwicklung.
                     </p>

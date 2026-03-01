@@ -24,21 +24,29 @@ type Project = {
 const projects: Project[] = [
     {
         title: "A. Marmor Ponzo UG",
-        description: "Portfolio & Kontakt - Natursteinhandel.",
+        description: "Digitale Präsenz für den Natursteinhandel. Fokus auf SEO und lokale Lead-Generierung in Berlin.",
         image: "/marmor.jpeg",
         href: "https://marmorponzo.de",
         status: "live",
-        tech: ["Next.js", "React", "Tailwind"],
+        tech: ["Next.js", "Tailwind", "SEO"],
     },
     {
         title: "Mirjam Barner",
-        description: "About, Newsletter, Quiz, Design, Termine",
+        description: "Full-Stack Lösung für Coaching & Design. Inklusive Newsletter-Anbindung und Quiz-Logik.",
         image: "/mirjambarner.png",
         href: "https://www.mirjambarner.com",
         status: "live",
-
+        tech: ["React", "API-Integration", "UX"],
+    },
+    {
+        title: "Dein Unternehmen?",
+        description: "Ich suche aktuell ein neues Projekt in Berlin (z.B. Gastronomie oder Handwerk), um meine nächste Case-Study zu erstellen.",
+        image: "/coming-soon.png", // Ein neutrales, professionelles Bild (z.B. ein Laptop oder Berliner Skyline)
+        status: "soon",
+        href:"/contact"
     },
 ]
+
 
 export default function PortfolioPage() {
     return (

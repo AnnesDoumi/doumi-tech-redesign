@@ -52,10 +52,8 @@ export function Header() {
             <div className="md:hidden py-4 border-t border-border">
               <div className="flex flex-col gap-4">
                 <Link href="/" onClick={() => setMobileMenuOpen(false)} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Home</Link>
-                <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Über mich</Link>
                 <Link href="/portfolio" onClick={() => setMobileMenuOpen(false)} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Referenzen</Link>
-                <Link href="/performance" onClick={() => setMobileMenuOpen(false)} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Performance</Link>
-
+                <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Über mich</Link>
                 <Button asChild size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90 w-full">
                   <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>Kontakt</Link>
                 </Button>

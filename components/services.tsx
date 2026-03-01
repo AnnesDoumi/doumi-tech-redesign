@@ -1,9 +1,8 @@
 "use client"
 
-import { useState } from "react"
 import { TrendingUp, Zap, Shield, ArrowUpRight } from "lucide-react"
 import Image from "next/image"
-import { PreviewModal } from "@/components/preview-modal"
+import Link from "next/link"
 
 const services = [
   {
@@ -23,25 +22,22 @@ const services = [
   },
   {
     icon: Shield,
-    title: "Professioneller Support & Beratung",
+    title: "Full-Service Betreuung & Hosting",
     description:
-        "Ich bin nicht nur Webentwickler. Ich verstehe auch deine IT-Infrastruktur und kann dir zu Datenschutz, Sicherheit und Hosting beraten. Du bekommst also echte Expertise, nicht nur Coding.",
-    technologies: "IT-Beratung · Sicherheit · Aufbau & Technik",
+        "Sie kümmern sich um Ihr Geschäft, ich mich um die Technik. Mit meinem Wartungspaket bleibt Ihre Seite sicher, DSGVO-konform und blitzschnell – inklusive persönlichem Support.",
+    technologies: "Hosting · Updates · Backup · Support",
     image: "/support.jpg",
   },
 ]
 
 export function Services() {
-  const [preview, setPreview] = useState<{ src: string; alt: string } | null>(null)
-
-  const openPreview = (src: string, alt: string) => setPreview({ src, alt })
-  const closePreview = () => setPreview(null)
-
   return (
       <section className="cv-auto pt-3 px-4 sm:px-6 lg:px-8 bg-primary/5">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center space-y-4 mb-16 pt-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground text-balance">Das baue ich für dich</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground text-balance">
+              Das baue ich für dich
+            </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Vom ersten Gespräch bis zum Go-Live – alles aus einer Hand, alles verständlich erklärt.
             </p>
@@ -56,13 +52,13 @@ export function Services() {
                       key={index}
                       className="group relative rounded-3xl overflow-hidden border border-border/50 bg-card hover:border-accent/50 transition-all duration-300 hover:shadow-xl hover:shadow-accent/5"
                   >
-                    {/* Bild (öffnet Vorschau) */}
-                    <button
-                        type="button"
-                        onClick={() => openPreview(service.image, service.title)}
-                        className="relative h-48 w-full cursor-zoom-in"
-                        aria-label={`${service.title} – Bild zeigen`}
-                    >
+                    {/* Link Overlay - Macht die ganze Card klickbar */}
+                    <Link href="/contact" className="absolute inset-0 z-30">
+                      <span className="sr-only">{service.title} anfragen</span>
+                    </Link>
+
+                    {/* Bild Bereich */}
+                    <div className="relative h-48 w-full overflow-hidden">
                       <Image
                           src={service.image || "/placeholder.svg"}
                           alt={service.title}
@@ -71,33 +67,36 @@ export function Services() {
                           priority={index < 2}
                           className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
-                    </button>
+                      {/* Subtiles Overlay auf dem Bild bei Hover */}
+                      <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
 
                     {/* Content */}
-                    <div className="p-6 space-y-4">
+                    <div className="p-6 space-y-4 relative z-20">
                       <div className="flex items-start justify-between">
                         <div className="p-3 rounded-xl bg-accent/20 text-accent group-hover:bg-accent/30 transition-colors">
                           <Icon className="w-6 h-6" />
                         </div>
 
-                        {/* Pfeil (öffnet ebenfalls Vorschau) */}
-                        <button
-                            type="button"
-                            onClick={() => openPreview(service.image, service.title)}
-                            className="p-2 rounded-lg hover:bg-accent/10 text-muted-foreground group-hover:text-accent transition-all"
-                            aria-label={`${service.title} – Bild zeigen`}
-                        >
+                        {/* Pfeil Icon als visueller Hinweis auf Link */}
+                        <div className="p-2 rounded-lg bg-muted/50 text-muted-foreground group-hover:text-accent group-hover:bg-accent/10 transition-all">
                           <ArrowUpRight className="w-5 h-5" />
-                        </button>
+                        </div>
                       </div>
 
-                      <div>
-                        <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                        <p className="text-muted-foreground leading-relaxed text-sm">{service.description}</p>
+                      <div className="space-y-2">
+                        <h3 className="text-xl font-semibold group-hover:text-accent transition-colors">
+                          {service.title}
+                        </h3>
+                        <p className="text-muted-foreground leading-relaxed text-sm">
+                          {service.description}
+                        </p>
                       </div>
 
-                      <div className="flex items-center gap-2 pt-2">
-                        <span className="text-xs text-muted-foreground font-medium">{service.technologies}</span>
+                      <div className="flex items-center gap-2 pt-2 border-t border-border/50">
+                        <span className="text-xs text-muted-foreground font-medium uppercase tracking-wider">
+                            {service.technologies}
+                        </span>
                       </div>
                     </div>
                   </article>
@@ -105,14 +104,6 @@ export function Services() {
             })}
           </div>
         </div>
-
-        {/* Vorschau-Modal */}
-        <PreviewModal
-            open={!!preview}
-            src={preview?.src ?? ""}
-            alt={preview?.alt ?? "Vorschau"}
-            onClose={closePreview}
-        />
       </section>
   )
 }

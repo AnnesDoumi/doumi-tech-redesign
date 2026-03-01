@@ -2,11 +2,12 @@ import {Button} from "@/components/ui/button"
 import {ArrowRight, Sparkles, CheckCircle2, Zap} from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import {ScoreBadgeAnimated} from "./score-badge-animated"
 
 export function Hero() {
     //@ts-ignore
     return (
-        <section className="cv-auto pt-24 pb-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <section className="cv-auto pt-24 pb-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
             <div className="absolute inset-0 -z-10">
                 <div className="absolute top-20 right-10 w-72 h-72 bg-accent/5 rounded-full blur-3xl"/>
                 <div className="absolute bottom-20 left-10 w-96 h-96 bg-secondary/8 rounded-full blur-3xl"/>
@@ -20,29 +21,25 @@ export function Hero() {
                             <Sparkles className="w-4 h-4 text-accent"/>
                             <span className="text-sm font-medium text-accent">Webseiten, die funktionieren</span>
                         </div>
-
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight text-balance">
                             Eine Webseite, die <span className="text-accent"> dein Klientel überzeugt.</span>
                         </h1>
 
                         <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed text-pretty">
-                            Eine gute Website funktioniert wie ein Verkäufer im Internet: Sie wird gefunden, macht einen guten Eindruck und überzeugt Besucher, dich zu kontaktieren. Genau das baue ich – schnell, zuverlässig und transparent.
-                        </p>
+                            Ich bin Wirtschaftsinformatiker aus Berlin und baue Webseiten, die das tun, was sie sollen: Funktionieren. Keine unnötigen Spielereien, sondern schnelle Ladezeiten, sauberes Design und Technik, die Ihre Kunden wirklich abholt.                        </p>
 
-                        {/* Desktop: Features */}
-                        <div className="hidden sm:flex flex-wrap gap-6 pt-4">
-                            <div className="flex items-center gap-2">
-                                <div className="p-2 rounded-lg bg-accent/15">
-                                    <CheckCircle2 className="w-5 h-5 text-accent"/>
-                                </div>
-                                <span className="text-sm font-medium">Professionell umgesetzt</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <div className="p-2 rounded-lg bg-accent/15">
-                                    <Zap className="w-5 h-5 text-accent"/>
-                                </div>
-                                <span className="text-sm font-medium">Blitzschnelle Ladezeiten</span>
-                            </div>
+
+                        <div className="grid grid-cols-2 gap-4">
+                            <ScoreBadgeAnimated
+                                label="PageSpeed Score"
+                                range={{ min: 96, max: 100 }}
+                                initial={100}
+                            />
+                            <ScoreBadgeAnimated
+                                label="Erreichbarkeit"
+                                range={{ min: 99, max: 100 }}
+                                initial={99}
+                            />
                         </div>
 
                         {/* Mobile: Buttons */}

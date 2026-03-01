@@ -19,11 +19,11 @@ export function CTA() {
                 </div>
 
                 <h2 className="text-balance text-3xl font-bold text-accent-foreground sm:text-4xl lg:text-5xl">
-                  Lass dich beraten
+                  Kostenlose Potenzial-Analyse
                 </h2>
 
                 <p className="leading-relaxed text-lg text-accent-foreground/90">
-                  In 30 Minuten sprechen wir über dein Projekt, deine Ziele und was eine gute Webseite für dich bedeutet. Keine versteckten Kosten, keine Verkaufsmasche – nur ehrliche Beratung.
+                  In 30 Minuten analysiere ich Ihren aktuellen Webauftritt aus IT- und BWL-Sicht. Sie erfahren exakt, wo Sie Kunden verlieren und wie wir Ihre Prozesse automatisieren können.
                 </p>
 
                 <div className="flex flex-col gap-4 pt-4 sm:flex-row">
