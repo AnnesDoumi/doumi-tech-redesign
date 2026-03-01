@@ -50,7 +50,7 @@ const projects: Project[] = [
 
 export default function PortfolioPage() {
     return (
-        <div className="min-h-screen bg-gradient-to-b from-background via-muted/20 to-background">
+        <div className="min-h-screen bg-gradient-to-br from-accent/20 via-secondary/10 to-primary/10">
             <Header/>
             <main className="pt-24 container mx-auto px-4 12 md:py-24">
                 <header className="text-center mb-16">

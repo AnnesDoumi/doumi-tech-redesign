@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function DatenschutzPage() {
     return (
-        <div className="pt-24 pb-20 min-h-screen bg-gradient-to-b from-background via-muted/20 to-background">
+        <div className="pt-24 pb-20 min-h-screen bg-gradient-to-br from-accent/20 via-secondary/10 to-primary/10">
             <Header />
             <main className="container mx-auto px-4 py-16 md:py-24">
                 <div className="max-w-3xl mx-auto space-y-10">
@@ -19,7 +19,7 @@ export default function DatenschutzPage() {
                     </header>
 
                     {/* 1. Verantwortlicher */}
-                    <section className="bg-card border border-border rounded-3xl p-8 md:p-12 space-y-4">
+                    <section className="bg-card bg-gradient-to-br from-accent/20 via-secondary/10 to-primary/0 border border-border rounded-3xl p-8 md:p-12 space-y-4">
                         <h2 className="text-2xl font-semibold">1. Verantwortlicher</h2>
                         <address className="not-italic leading-relaxed">
                             <div>Annes Bani Al Doumi</div>
@@ -35,7 +35,7 @@ export default function DatenschutzPage() {
                     </section>
 
                     {/* 2. Zugriffsdaten / Server-Logs */}
-                    <section className="bg-card border border-border rounded-3xl p-8 md:p-12 space-y-4">
+                    <section className="bg-card bg-gradient-to-br from-accent/20 via-secondary/10 to-primary/10 border border-border rounded-3xl p-8 md:p-12 space-y-4">
                         <h2 className="text-2xl font-semibold">2. Zugriffsdaten / Server-Logs</h2>
                         <p className="text-muted-foreground">
                             Beim Aufruf dieser Webseite werden automatisch Informationen erfasst, die Ihr Browser übermittelt (u. a.
@@ -46,7 +46,7 @@ export default function DatenschutzPage() {
                     </section>
 
                     {/* 3. Kontaktaufnahme */}
-                    <section className="bg-card border border-border rounded-3xl p-8 md:p-12 space-y-4">
+                    <section className="bg-card bg-gradient-to-br from-accent/20 via-secondary/10 to-primary/10 border border-border rounded-3xl p-8 md:p-12 space-y-4">
                         <h2 className="text-2xl font-semibold">3. Kontaktaufnahme</h2>
                         <p className="text-muted-foreground">
                             Bei der Kontaktaufnahme per E-Mail werden die von Ihnen mitgeteilten Daten zur Bearbeitung der Anfrage
@@ -57,7 +57,7 @@ export default function DatenschutzPage() {
                     </section>
 
                     {/* 4. Cookies & Tracking */}
-                    <section className="bg-card border border-border rounded-3xl p-8 md:p-12 space-y-4">
+                    <section className="bg-card bg-gradient-to-br from-accent/20 via-secondary/10 to-primary/10 border border-border rounded-3xl p-8 md:p-12 space-y-4">
                         <h2 className="text-2xl font-semibold">4. Cookies &amp; Tracking</h2>
                         <p className="text-muted-foreground">
                             Es werden keine Tracking-Cookies oder Analyse-Dienste eingesetzt. Es kommen nur technisch notwendige
@@ -66,7 +66,7 @@ export default function DatenschutzPage() {
                     </section>
 
                     {/* 5. Externe Inhalte / Links */}
-                    <section className="bg-card border border-border rounded-3xl p-8 md:p-12 space-y-4">
+                    <section className="bg-card bg-gradient-to-br from-accent/20 via-secondary/10 to-primary/10 border border-border rounded-3xl p-8 md:p-12 space-y-4">
                         <h2 className="text-2xl font-semibold">5. Einbindung externer Inhalte / Links</h2>
                         <p className="text-muted-foreground">
                             Das Portfolio verlinkt auf externe Webseiten (z. B. Projekt-Live-Sites). Beim Aufruf externer Seiten gelten
@@ -75,7 +75,7 @@ export default function DatenschutzPage() {
                     </section>
 
                     {/* 6. Auftragsverarbeitung / Hosting */}
-                    <section className="bg-card border border-border rounded-3xl p-8 md:p-12 space-y-4">
+                    <section className="bg-card bg-gradient-to-br from-accent/20 via-secondary/10 to-primary/10 border border-border rounded-3xl p-8 md:p-12 space-y-4">
                         <h2 className="text-2xl font-semibold">6. Auftragsverarbeitung / Hosting</h2>
                         <p className="text-muted-foreground">
                             Die Webseite wird bei einem externen Dienstleister gehostet. Dabei können Server-Logs anfallen.
@@ -83,7 +83,7 @@ export default function DatenschutzPage() {
                     </section>
 
                     {/* 7. Betroffenenrechte */}
-                    <section className="bg-card border border-border rounded-3xl p-8 md:p-12 space-y-4">
+                    <section className="bg-card bg-gradient-to-br from-accent/20 via-secondary/10 to-primary/10 border border-border rounded-3xl p-8 md:p-12 space-y-4">
                         <h2 className="text-2xl font-semibold">7. Betroffenenrechte</h2>
                         <p className="text-muted-foreground">
                             Sie haben Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
@@ -93,7 +93,7 @@ export default function DatenschutzPage() {
                     </section>
 
                     {/* 8. Sicherheit */}
-                    <section className="bg-card border border-border rounded-3xl p-8 md:p-12 space-y-4">
+                    <section className="bg-card bg-gradient-to-br from-accent/20 via-secondary/10 to-primary/10 border border-border rounded-3xl p-8 md:p-12 space-y-4">
                         <h2 className="text-2xl font-semibold">8. Sicherheit</h2>
                         <p className="text-muted-foreground">
                             Es werden geeignete technische und organisatorische Maßnahmen eingesetzt, um ein dem Risiko angemessenes
@@ -102,7 +102,7 @@ export default function DatenschutzPage() {
                     </section>
 
                     {/* 9. Aktualität */}
-                    <section className="bg-card border border-border rounded-3xl p-8 md:p-12 space-y-4">
+                    <section className="bg-card bg-gradient-to-br from-accent/20 via-secondary/10 to-primary/10 border border-border rounded-3xl p-8 md:p-12 space-y-4">
                         <h2 className="text-2xl font-semibold">9. Aktualität</h2>
                         <p className="text-muted-foreground">
                             Diese Datenschutzerklärung wird bei Bedarf aktualisiert.

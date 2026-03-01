@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 
 export default function ContactPage() {
   return (
-      <div className="pt-12 min-h-screen bg-gradient-to-b from-background to-background overflow-x-clip">
+      <div className="pt-12 min-h-screen bg-gradient-to-br from-accent/20 via-secondary/10 to-primary/10 overflow-x-clip">
         <Header />
         <main className="container mx-auto px-4 py-16 md:py-24 overflow-x-clip">
           <div className="max-w-4xl mx-auto">
@@ -56,7 +56,7 @@ export default function ContactPage() {
             </div>
 
             {/* Process Section */}
-            <div className="mb-16 bg-card border border-border/50 rounded-3xl bg-gradient-to-br from-accent/15 to-secondary/10 p-8 md:p-12">
+            <div className="mb-16 bg-card border border-border/50 rounded-3xl bg-gradient-to-br from-accent/20 via-secondary/10 to-primary/10 p-8 md:p-12">
 
               <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">So läuft es ab</h2>
 
@@ -125,7 +125,7 @@ export default function ContactPage() {
 
 
             {/* Important Info Box */}
-            <div className="bg-card bg-gradient-to-br from-accent/15 to-secondary/10 border border-border/50 rounded-3xl p-8 md:p-12 mb-12">
+            <div className="bg-card bg-gradient-to-br from-accent/20 via-secondary/10 to-primary/10 border border-border/50 rounded-3xl p-8 md:p-12 mb-12">
               <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
                 <CheckCircle2 className="w-6 h-6 text-accent" />
                 Das solltest du wissen

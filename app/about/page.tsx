@@ -31,7 +31,7 @@ export default function AboutPage() {
   ]
 
   return (
-      <div className="pt-24 min-h-screen bg-gradient-to-b from-background to-background">
+      <div className="pt-24 min-h-screen bg-gradient-to-br from-accent/20 via-secondary/10 to-primary/10">
         <Header />
         <main className="container mx-auto px-4 py-16 md:py-24 max-w-7xl">
 

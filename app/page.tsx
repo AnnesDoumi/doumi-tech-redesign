@@ -8,7 +8,7 @@ import {Services} from "@/components/services";
 
 export default function Home() {
     return (
-        <div className="min-h-screen bg-gradient-to-b from-background via-muted/20 to-background">
+        <div className="min-h-screen bg-gradient-to-br from-accent/20 via-secondary/10 to-primary/10">
             <Header/>
             <main>
                 <Hero/>

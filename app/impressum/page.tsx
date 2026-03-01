@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ImpressumPage() {
     return (
-        <div className="min-h-screen bg-gradient-to-b from-background via-muted/20 to-background">
+        <div className="min-h-screen bg-gradient-to-br from-accent/20 via-secondary/10 to-primary/10">
             <Header />
             <main className="pt-24 pb-20 container mx-auto px-4 py-16 md:py-24">
                 <div className="max-w-3xl mx-auto space-y-10">
@@ -18,7 +18,7 @@ export default function ImpressumPage() {
                         <p className="text-muted-foreground">Angaben gemäß § 5 TMG</p>
                     </header>
 
-                    <section className="bg-card border border-border rounded-3xl p-8 md:p-12 space-y-6">
+                    <section className="bg-card bg-gradient-to-br from-accent/20 via-secondary/10 to-primary/10 border border-border rounded-3xl p-8 md:p-12 space-y-6">
                         <h2 className="text-2xl font-semibold">Anbieter</h2>
                         <address className="not-italic leading-relaxed">
                             <div>Annes Bani Al Doumi</div>
@@ -55,7 +55,7 @@ export default function ImpressumPage() {
                         </div>
                     </section>
 
-                    <section className="bg-card border border-border rounded-3xl p-8 md:p-12 space-y-6">
+                    <section className="bg-card bg-gradient-to-br from-accent/20 via-secondary/10 to-primary/10 border border-border rounded-3xl p-8 md:p-12 space-y-6">
                         <h2 className="text-2xl font-semibold">Haftung</h2>
 
                         <div className="space-y-3">
