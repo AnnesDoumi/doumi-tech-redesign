@@ -178,7 +178,7 @@ export default function PortfolioPage() {
                                         verwandeln.
                                     </p>
 
-                                    <div className="flex flex-col gap-4 pt-4 sm:flex-row">
+                                    <div className="flex flex-col gap-4 pt-0 sm:flex-row">
                                         <Button
                                             asChild
                                             size="lg"
@@ -195,7 +195,7 @@ export default function PortfolioPage() {
                                     </div>
 
                                     {/* Stats */}
-                                    <div className="grid grid-cols-3 gap-6 border-t border-accent-foreground/20 pt-8">
+                                    <div className="grid grid-cols-3 gap-6 border-t border-accent-foreground/20 pt-4">
                                         <div>
                                             <div className="text-2xl font-bold text-accent-foreground">100%</div>
                                             <div className="text-sm text-accent-foreground/80">Zufriedenheit</div>
@@ -213,7 +213,7 @@ export default function PortfolioPage() {
 
                                 {/* Image Side – ohne Zwischen-Card, nur das Bild */}
                                 {/* Image Side – bündig, ohne Zwischen-Card, aber mit leicht abgerundetem Bild */}
-                                <section className="py-4 px-4 sm:px-6 lg:px-8">
+                                <section className="pb-8 pt-0 px-4 sm:px-6 lg:px-8">
                                     <div
                                         className="relative bg-gradient-to-br from-accent via-accent to-secondary rounded-3xl overflow-hidden">
                                         <div
