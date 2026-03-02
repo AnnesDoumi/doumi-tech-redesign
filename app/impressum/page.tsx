@@ -21,6 +21,7 @@ export default function ImpressumPage() {
                     <section className="bg-card bg-gradient-to-br from-accent/20 via-secondary/10 to-primary/10 border border-border rounded-3xl p-8 md:p-12 space-y-6">
                         <h2 className="text-2xl font-semibold">Anbieter</h2>
                         <address className="not-italic leading-relaxed">
+                            <div>Annes Doumi Tech</div>
                             <div>Annes Bani Al Doumi</div>
                             <div>Gropiusstraße 3</div>
                             <div>13357 Berlin</div>
