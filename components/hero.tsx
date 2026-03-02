@@ -51,9 +51,6 @@ export function Hero() {
                                 <Button asChild size="sm" variant="outline" className="flex-1 min-w-[100px]">
                                     <Link href="/portfolio">Referenzen</Link>
                                 </Button>
-                                <Button asChild size="sm" variant="outline" className="flex-1 min-w-[100px]">
-                                    <Link href="/performance">Performance</Link>
-                                </Button>
                             </div>
 
                             <div className="flex justify-center pt-3">
