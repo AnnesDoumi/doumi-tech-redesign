@@ -130,6 +130,7 @@
       /* Macht die Schrift auf Macs und Windows-Rechnern deutlich schärfer */
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+
     }
 
     /* Verhindert das "Hüpfen" der Seite, wenn Modals (Preview) geöffnet werden */
@@ -171,3 +172,20 @@ a, button { -webkit-tap-highlight-color: transparent; }
   animation: slideUpFade 0.4s ease-out forwards;
 }
 
+/* Ersetze das in deiner globals.css */
+html {
+  /* Verhindert das seitliche Wackeln und sorgt für stabiles Scrollen */
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  /* Entferne h-full oder height: 100% falls vorhanden! */
+}
+
+/* Falls du 'main-offset' nutzt, stell sicher, dass es keine negativen Margins hat */
+.main-offset {
+  padding-top: 5rem;
+}

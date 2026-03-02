@@ -36,9 +36,6 @@ export default function ContactPage() {
 
                 {/* Location Card */}
                 <a
-                    href="https://www.google.com/maps/search/?api=1&query=Gropiusstraße%203%2C%2013357%20Berlin"
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="relative block w-full bg-gradient-to-br from-accent/15 to-secondary/10 border border-border/50 rounded-3xl p-6 sm:p-8 hover:border-accent/50 transition-all duration-300 hover:shadow-xl hover:shadow-accent/10"
                     aria-label="In Google Maps öffnen"
                 >

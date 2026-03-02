@@ -4,6 +4,7 @@ import { Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import Script from "next/script"
 import "./globals.css"
+import { ScrollHandler } from "@/components/scroll-handler"
 
 // Schriftart: Inter lokal laden (keine blockierenden Google-Requests)
 const inter = Inter({
@@ -69,7 +70,7 @@ export default function RootLayout({
                                        children,
                                    }: Readonly<{ children: React.ReactNode }>) {
     return (
-        <html lang="de" className="h-full">
+        <html lang="de">
         <head>
             {/* Favicon preload */}
             <link rel="preload" as="image" href="/favicon.png" />
@@ -105,6 +106,7 @@ export default function RootLayout({
         <body
             className={`${inter.className} font-sans antialiased min-h-screen bg-background text-foreground`}
         >
+        <ScrollHandler />
         {children}
 
         {/* Vercel Analytics */}

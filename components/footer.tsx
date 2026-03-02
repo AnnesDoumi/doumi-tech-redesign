@@ -1,4 +1,4 @@
-"use client" // Wichtig, da wir Hooks benutzen
+"use client"
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -7,34 +7,38 @@ import { Mail, MapPin } from "lucide-react"
 export function Footer() {
     const pathname = usePathname()
 
-    // Funktion für das Scroll-Verhalten
-    const handleScrollTop = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-        if (pathname === href) {
-            // Wir sind schon auf der Seite -> Smooth Scroll nach oben
+    const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        // Wir vergleichen die Pfade ganz simpel
+        const isCurrentPage = pathname === href || (pathname === "/" && href === "/");
+
+        if (isCurrentPage) {
+            // 1. Wir stoppen ALLES, was der Browser oder Next.js vorhatte
             e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth",
+            e.stopPropagation();
+
+            // 2. Wir nutzen requestAnimationFrame für maximale Priorität im Browser-Rendering
+            requestAnimationFrame(() => {
+                window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: "smooth"
+                });
             });
-        } else {
-            // Wir wechseln die Seite -> Sofort nach oben springen beim Laden
-            // Next.js macht das oft, aber Mobile-Browser "hängen" manchmal.
-            // Ein kleiner Timeout stellt sicher, dass es nach dem Render passiert.
-            setTimeout(() => {
-                window.scrollTo(0, 0);
-            }, 10);
         }
-    };
+    }
+
+    
 
     return (
         <footer className="border-t border-border bg-card">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-                    {/* Brand */}
+
+                    {/* Brand Bereich */}
                     <div className="space-y-4 lg:col-span-2">
                         <Link
                             href="/"
-                            onClick={(e) => handleScrollTop(e, "/")}
+                            onClick={(e) => handleNavigation(e, "/")}
                             className="text-2xl font-semibold text-foreground inline-block"
                         >
                             doumi<span className="text-accent">.tech</span>
@@ -44,10 +48,7 @@ export function Footer() {
                             Benutzererfahrung. Moderne Technologien, saubere Umsetzung.
                         </p>
                         <div className="flex flex-col gap-3 pt-4">
-                            <a
-                                href="mailto:info@doumi.tech"
-                                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors"
-                            >
+                            <a href="mailto:info@doumi.tech" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors w-fit">
                                 <Mail className="w-4 h-4"/>
                                 info@doumi.tech
                             </a>
@@ -62,55 +63,19 @@ export function Footer() {
                     <div className="space-y-4">
                         <h3 className="text-sm font-semibold text-foreground">Navigation</h3>
                         <nav className="flex flex-col gap-3">
-                            <Link
-                                href="/"
-                                onClick={(e) => handleScrollTop(e, "/")}
-                                className="text-sm text-muted-foreground hover:text-accent transition-colors"
-                            >
-                                Home
-                            </Link>
-                            <Link
-                                href="/portfolio"
-                                onClick={(e) => handleScrollTop(e, "/portfolio")}
-                                className="text-sm text-muted-foreground hover:text-accent transition-colors"
-                            >
-                                Referenzen
-                            </Link>
-                            <Link
-                                href="/about"
-                                onClick={(e) => handleScrollTop(e, "/about")}
-                                className="text-sm text-muted-foreground hover:text-accent transition-colors"
-                            >
-                                Über mich
-                            </Link>
+                            <Link href="/" className="text-sm text-muted-foreground hover:text-accent transition-colors">Home</Link>
+                            <Link href="/portfolio" className="text-sm text-muted-foreground hover:text-accent transition-colors">Referenzen</Link>
+                            <Link href="/about" className="text-sm text-muted-foreground hover:text-accent transition-colors">Über mich</Link>
                         </nav>
                     </div>
 
-                    {/* Legal */}
+                    {/* Rechtliches */}
                     <div className="space-y-4">
                         <h3 className="text-sm font-semibold text-foreground">Rechtliches</h3>
                         <nav className="flex flex-col gap-3">
-                            <Link
-                                href="/impressum"
-                                onClick={(e) => handleScrollTop(e, "/impressum")}
-                                className="text-sm text-muted-foreground hover:text-accent transition-colors"
-                            >
-                                Impressum
-                            </Link>
-                            <Link
-                                href="/datenschutz"
-                                onClick={(e) => handleScrollTop(e, "/datenschutz")}
-                                className="text-sm text-muted-foreground hover:text-accent transition-colors"
-                            >
-                                Datenschutz
-                            </Link>
-                            <Link
-                                href="/contact"
-                                onClick={(e) => handleScrollTop(e, "/contact")}
-                                className="text-sm text-muted-foreground hover:text-accent transition-colors"
-                            >
-                                Kontakt
-                            </Link>
+                            <Link href="/impressum" className="text-sm text-muted-foreground hover:text-accent transition-colors">Impressum</Link>
+                            <Link href="/datenschutz" className="text-sm text-muted-foreground hover:text-accent transition-colors">Datenschutz</Link>
+                            <Link href="/contact" className="text-sm text-muted-foreground hover:text-accent transition-colors">Kontakt</Link>
                         </nav>
                     </div>
                 </div>
