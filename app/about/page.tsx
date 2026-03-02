@@ -76,7 +76,7 @@ export default function AboutPage() {
                 return (
                     <div
                         key={index}
-                        className="group bg-card border border-border/50 rounded-3xl p-8 hover:border-accent/50 transition-all duration-300"
+                        className="group bg-gradient-to-br from-accent/20 via-secondary/10 to-primary/10 bg-card border border-border/50 rounded-3xl p-8 hover:border-accent/50 transition-all duration-300"
                     >
                       <div className="p-3 w-fit rounded-2xl bg-accent/10 text-accent mb-6 group-hover:bg-accent/20 transition-colors">
                         <Icon className="w-8 h-8" />
