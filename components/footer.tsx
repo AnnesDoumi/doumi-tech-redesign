@@ -10,13 +10,21 @@ export function Footer() {
     // Funktion für das Scroll-Verhalten
     const handleScrollTop = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
         if (pathname === href) {
-            e.preventDefault()
+            // Wir sind schon auf der Seite -> Smooth Scroll nach oben
+            e.preventDefault();
             window.scrollTo({
                 top: 0,
                 behavior: "smooth",
-            })
+            });
+        } else {
+            // Wir wechseln die Seite -> Sofort nach oben springen beim Laden
+            // Next.js macht das oft, aber Mobile-Browser "hängen" manchmal.
+            // Ein kleiner Timeout stellt sicher, dass es nach dem Render passiert.
+            setTimeout(() => {
+                window.scrollTo(0, 0);
+            }, 10);
         }
-    }
+    };
 
     return (
         <footer className="border-t border-border bg-card">
